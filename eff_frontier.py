@@ -84,17 +84,17 @@ print('\nMinimum Variance Portfolio:')
 print(result.head(1)) # print weights of min var
 min_vol_port_x, min_vol_port_y = result['St_Dev'].head(1), result['Returns'].head(1) # get coordinates of min var portfolio
 
-# calculate Capital Market Line (CML) using coordinates of risk free rate and tangency of efficient frontier (max sharpe portfolio)
+# calculate Capital Allocation Line (CAL) using coordinates of risk free rate and tangency of efficient frontier (max sharpe portfolio)
 x = [0,float(max_sharpe_port_x)]
 y = [risk_free_rate,float(max_sharpe_port_y)]
 coeff = np.poly1d( np.polyfit(x,y, deg=1))
-cml = coeff([-1,1])
+cal = coeff([-1,1])
 
 # scatter plot of simulated portfolios
 result.plot.scatter(x='St_Dev', y='Returns', marker='o', s=10, alpha=0.3, grid=True, figsize=[10,10])
 plt.scatter(min_vol_port_x, min_vol_port_y, color='r', marker='*', s=300, label='Min Variance') # show min var portfolio
 plt.scatter(max_sharpe_port_x, max_sharpe_port_y, color='g', marker='*', s=300,label='Max Sharpe') # show max sharpe portfolio
-plt.plot([-1,1],cml,label='CML',color='orange') # Capital market line
+plt.plot([-1,1],cal,label='CAL',color='orange') # Capital allocation line
 plt.xlim([0,result['St_Dev'].max()*1.25]) # adjust x-axis
 plt.ylim([min(result['Returns'].min()-0.01,0),result['Returns'].max()*1.25]) # adjust y-axis
 plt.legend(loc='upper right')
