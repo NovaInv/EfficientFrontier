@@ -5,7 +5,7 @@ portfolio expected returns and standard deviation is calculated from historical 
 
 # Correlation and Covariance Matrices
 Assets with low to negative correlations will produce portfolios with lower variance. A correlation and covariance matrix is plotted
-to visualize or manually selection a smaller group of assets to test.
+to visualize or manually select a smaller group of assets to test.
 ![Corr and Cov Matrices](https://user-images.githubusercontent.com/45056473/201168924-6aa3c498-fb94-4aa1-8fd8-9e68fc286aca.PNG)
 
 # Two-Asset Portfolio Optimization
