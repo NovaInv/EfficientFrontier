@@ -17,9 +17,21 @@ allocation line is plotted tangent to the efficent frontier and connects the ris
 # Mult-Asset Portfolio Optimization
 ![Eff_front](https://user-images.githubusercontent.com/45056473/201169241-5c47ed9f-49c9-44b0-a77e-00f2a2c29c36.PNG)
 Optimal Portfolio:
-          AAPL      GOOG     BRK-B     JNJ   Returns    St_Dev    Sharpe
-6743  0.918863  0.051395  0.021941  0.0078  0.292986  0.317209  0.910714
+AAPL: 0.918863,
+GOOG: 0.051395,
+BRK-B: 0.021941,     
+JNJ: 0.0078,
+Returns: 0.292986,
+St_Dev: 0.317209,
+Sharpe: 0.910714 
 
 Minimum Variance Portfolio:
-          AAPL      GOOG     BRK-B       JNJ   Returns    St_Dev    Sharpe
-4645  0.005377  0.272814  0.091699  0.630109  0.109641  0.191628  0.550759
+AAPL: 0.005377,
+GOOG: 0.272814,
+BRK-B: 0.091699,
+JNJ: 0.630109,
+Returns: 0.109641,    
+St_Dev: 0.191628,  
+Sharpe: 0.550759
+
+TO-DO: Add asset constraints.
